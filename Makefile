@@ -1,9 +1,12 @@
-.PHONY: run git
+.PHONY: run build git
 
 run:
 	go run main.go
 
-git:
+build:
+	go build
+
+git: build
 	git diff
 	git add .
 	git commit
